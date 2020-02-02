@@ -2,5 +2,5 @@ package constants;
 
 public class Constants {
 
-    public static final String TOKEN = "NjczMDc5NTQ1MjYzNTU0NTkx.XjYCCg.x30oKvLi2llPUhJSXbRrSXlJeDg";
+    public static final String TOKEN = "NjczNDc3NDEyMTIxNzM5Mjk1.XjaozA.8saSVV-rzyhBx2NoYjYZKq_VJ-g";
 }
