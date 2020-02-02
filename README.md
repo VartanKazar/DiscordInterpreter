@@ -40,8 +40,9 @@ Our team made an effort to follow the [Java coding standards](https://www.oracle
 
 | Name             | Description                                                              |
 | ---------------- | ------------------------------------------------------------------------ |
-| **!!WakeUp**     | Responds with 'Ok, I'm up!'                                              |
-| **hello**        | Responds with 'Hi, Welcome'                                              |
+| **!join**        | makes the server bot connect to currrent voice channel and then annouce  Note: user must be in voice channel for command to work|
+| **!help**        | displays information about all commands for the bot                      |
+| **!leave**       | disconnects the bot that was formerly connected                          |
 
 ## Technologies
 
@@ -83,7 +84,11 @@ As we came to the stage that we became familiar with what we truly wanted from t
 * We did not start off with a functional git management system. We did not have a lot of experience with managing branching, committing vs pushing, pulling and fetching software. Over the course of the construction of the bot we learned more about the proper git methodology that is necessary to streamline the creation phase of our bot.
 * Given the little experience we had with Node.js and javascript itself we pivoted to using a Java wrapper for the Discord API and stick with JAVA with which we were all more familiar. This made our repositories get corrupted and we moved onto making a new one from scratch. 
 * Due to the differences of JDK and IDE preferences within each computer our shared code in our repository didnt always work. We had to get togther and stop coding and address the issue as a group, in order to make sure all computers were using the same underlying base software so that we didnt run into errors in running out program.
-* Discord's auth token did not want to be hard coded into our program. We had to shift its location into a seperate text file in the gitignore file and call the value from that location in order to make our program process the token value correctly. This way we got the code to run correctly and safely.
+
+
+![email from discord about authentication token](https://github.com/VartanKazar/DiscordInterpreter/blob/dev-josue/docs/images/tokenEmail.png)
+
+* Discord's auth token is not allowed to be in a public repository due to cybercsecurity reasons. We had to shift its location into a seperate text file which is included in the gitignore file and call token from that file in order to get Discord to let us run out bot. If we had more time we would have saved the token on a server to improve security. Nonetheless we got the code to run correctly and safely.
 
 ## Code Team
 
