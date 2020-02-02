@@ -9,5 +9,7 @@ public class Greeting extends ListenerAdapter {
             event.getChannel().sendMessage("Hi welcome!").queue();
 
         }
+
+
     }
 }
