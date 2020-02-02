@@ -11,11 +11,11 @@ Built with JDA, CMUSphinx and a focus on accessibility, Discord Interpreter prov
 4. [Technologies](#technologies)
 5. [Useful links](#useful-links)
 6. [Code Progress](#code-progress)
-7. [Core team](#core-team)
+7. [Code Team](#code-team)
 
 ## Install
 
-1. Download the files from this site. No other versions are officially supported
+Standard download the files from this site applies. No other versions are officially supported
 
 ## Introduction
 
@@ -39,10 +39,8 @@ Our team made an effort to follow the [Java coding standards](https://www.oracle
 
 | Name             | Description                                                              |
 | ---------------- | ------------------------------------------------------------------------ |
-| **command1**     | does this                                                                |
-| **command2**     | does this                                                                |
-| **command3**     | does this                                                                |
-| **command4**     | does this                                                                |
+| **!!WakeUp**     | Responds with 'Ok, I'm up!'                                              |
+| **hello**        | Responds with 'Hi, Welcome'                                              |
 
 ## Technologies
 
@@ -66,9 +64,57 @@ This project uses Java SDK v13.0.2
 * [Google Speech-to-Text](https://cloud.google.com/speech-to-text "Google speech-to-text")
 * [Google Speech-to-Text Wiki](https://cloud.google.com/speech-to-text/docs/ "Google speech-to-text")
 
-## Core Team
-##### [Astghik Hovhannisyan](https://github.com/AstghikHov "Astghik Hovhannisyan's github page")
-##### [Josue Orellana](https://github.com/jiorellana "Josue Orellana's github page")
-##### [Mikael Kuyumchyan](https://github.com/MikaelKuyumchyan "Michael Kuyumchyan's github page")
-##### [Tracy Smart](https://github.com/TracySmart795 "Tracy Smart's github page")
-##### [Vartan Kazaryan](https://github.com/VartanKazar "Vartan Kazaryan's github page")
+## Code Progress
+![project progress image 1 showing base project plan](https://github.com/VartanKazar/DiscordInterpreter/blob/dev-josue/docs/images/taskList1.jpg)
+
+This project started off with us deciding to start with the coding language of Javascript and Node.js as our runtime environment. We setup our baseline repository with SourceTree and our IDE with Visual Studio Code. We started early on with documentation and our presentation to help us maximize time spent coding. We planned to create a base text channel which would output text created by our speech to text engine. Another planned feature was a notification based text system which would allow users to get a voice channels text as notifications if they didnt want discord occupying a part of their active screen.
+
+![project progress image 2 showing base project plan](https://github.com/VartanKazar/DiscordInterpreter/blob/dev-josue/docs/images/taskList2.jpg)
+
+As we progressed we realized we wanted to switch over to Java, and moved onto JDA to serve as our Java wrapper and IntelliJ as our IDE. This decision was made as a group due to our higher level of comfort with the Java language as a whole versus having to get Node.js to work with us. In addition during thsi stage several key roadblocks were met with establishing our repository and maintaining the proper git methodology. We established timelines in order to help us keep on track and manage our commitment.
+
+![project progress image 3 showing base project plan](https://github.com/VartanKazar/DiscordInterpreter/blob/dev-josue/docs/images/taskList3.jpg)
+
+As we came to the stage that we became familiar with what we truly wanted from the app we experienced several other coding challenges which hinder our overall productivity. We had to scrap some ideas due to the limitations of Discord bots and leave other out due to time. Overall all progress we made in terms of our code helped us learn a lot about Discord's API, Java wrappers, importing and setting up libraries, maintaining proper git repositories, establishing timelines, delegating tasks and managing a project's desired abilities vs actual abilities.
+
+## Code Team
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top">
+        <img width="150" height="150" src="https://github.com/VartanKazar/DiscordInterpreter/blob/dev-josue/docs/images/astghik_hovhannisyan_profile.jpg">
+        <br>
+        <a href="https://github.com/AstghikHov">Astghik Hovhannisyan</a>
+        <p>Presentation</p>
+        <br>
+      </td>
+      <td align="center" valign="top">
+        <img width="150" height="150" src="https://github.com/VartanKazar/DiscordInterpreter/blob/dev-josue/docs/images/josue_orellana_profile.JPG">
+        <br>
+        <a href="https://github.com/jiorellana">Josue Orellana</a>
+        <p>Documentation</p>
+        <br>
+      </td>
+      <td align="center" width="20%" valign="top">
+        <img width="150" height="150" src="https://github.com/VartanKazar/DiscordInterpreter/blob/dev-josue/docs/images/mikael_kuyumchyan_profile.jpg">
+        <br>
+        <a href="https://github.com/MikaelKuyumchyan">Mikael Kuyumchyan</a>
+        <p>S2T engine integration</p>
+        <br>
+      </td>
+      <td align="center" width="20%" valign="top">
+        <img width="150" height="150" src="https://github.com/VartanKazar/DiscordInterpreter/blob/dev-josue/docs/images/vartan_kazaryan_profile.jpg">
+        <br>
+        <a href="https://github.com/VartanKazar">Vartan Kazaryan</a>
+        <p>Discord API &amp; development</p>
+        <br>
+      </td>
+      <td align="center" valign="top">
+        <img width="150" height="150" src="https://github.com/VartanKazar/DiscordInterpreter/blob/dev-josue/docs/images/tracy_smart_profile.jpg">
+        <br>
+        <a href="https://github.com/TracySmart795">Tracy Smart</a>
+        <p>Discord API &amp; development</p>
+        <br>
+  </tbody>
+</table>
