@@ -2,7 +2,7 @@
 
 A quick, responsive bot :robot: that provides speech to text for [Discord](https://www.google.com "Discord Homepage") voice channels.
 
-Built with JDA, VocalCord and a focus on accessibility, Discord Interpreter provides text reference to live voice channels with easy to use commands and minimal interference to the overall UI of Discord.
+Built with JDA, CMUSphinx and a focus on accessibility, Discord Interpreter provides text reference to live voice channels with easy to use commands and minimal interference to the overall UI of Discord.
 
 ## Table of Contents
 1. [Install](#install)
@@ -47,15 +47,19 @@ Discord Interpreter can run on any device and server which supports installation
 
 This project uses Java SDK v13.0.2
 
-#### Speech to text(S2T/T2S) service
+#### JDA (Java Discord API)
+* JDA strives to provide a clean and full wrapping of the Discord REST api and its Websocket-Events for Java. This library is a helpful tool that provides the functionality to create a discord bot in java.
+#### CMUSphinx
+* Provides state of art speech recognition algorithms for efficient speech recognition. CMUSphinx tools are designed specifically for low-resource platforms and supports several languages such as US English, UK English, French, Mandarin, German, Dutch, Russian and ability to build a models for others. It also has a wide range of tools for many speech-recognition related purposes (keyword spotting, alignment, pronuncation evaluation).
+#### Google CLoud's speech API
 #### Languages
 #### Libraries
 
 ## Useful Links
 
-[JDA (Java Discord API)](https://github.com/DV8FromTheWorld/JDA "Java Discord API github home page")
-[other useful link](https://www.google.com "Blank Link")
-[other useful link2](https://www.google.com "Blank Link")
+* [JDA (Java Discord API)](https://github.com/DV8FromTheWorld/JDA "Java Discord API github home page")
+* [VocalCord](https://github.com/wdavies973/VocalCord "Vocal Cord github home page")
+* [Other useful link2](https://www.google.com "Blank Link")
 
 ## Support
 
