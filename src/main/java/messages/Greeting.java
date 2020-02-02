@@ -8,6 +8,8 @@ import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.managers.AudioManager;
 
+import java.util.Random;
+
 public class Greeting extends ListenerAdapter {
 
     //Makes the bot move in to the voice chat that the user is currently in.
@@ -28,12 +30,11 @@ public class Greeting extends ListenerAdapter {
         // Gets the audio manager, used for switching to voice channels.
         AudioManager audioManager = event.getGuild().getAudioManager();
 
-        if(message.equals("!join")) {
+        if(message.equalsIgnoreCase("!join")) {
             // Checks if the bot has permissions.
             if(!event.getGuild().getSelfMember().hasPermission(channel, Permission.VOICE_CONNECT)) {
                 // The bot does not have permission to join any voice channel. Don't forget the .queue()!
                 channel.sendMessage("I do not have permissions to join a voice channel!").queue();
-
                 return;
             }
 
@@ -48,17 +49,42 @@ public class Greeting extends ListenerAdapter {
             // Connects to the channel.
             audioManager.openAudioConnection(connectedChannel);
             // Obviously people do not notice someone/something connecting.
+            channel.sendMessage("Ok, I'm listening!").queue();
             channel.sendMessage("Connected to the voice channel!").queue();
 
-            //createTextChannel(event);
-
-        } else if(message.equals("!leave")) { // Checks if the command is !leave.
+        } else if(message.equalsIgnoreCase("!leave")) { // Checks if the command is !leave.
 
             // Disconnect from the channel.
             event.getGuild().getAudioManager().closeAudioConnection();
             // Notify the user.
             channel.sendMessage("Disconnected from the voice channel!").queue();
+        } else if(message.equalsIgnoreCase("!help")){
+            //direct to github page
+            channel.sendMessage("Type '!join'  to join the channel").queue();
+            channel.sendMessage("Type '!leave!' to leave the channel").queue();
+            channel.sendMessage("Type '!resources!' to get useful resources for deaf and hard of hearing").queue();
+            channel.sendMessage("For more information go to https://github.com/DV8FromTheWorld/JDA#creating-the-jda-object%22").queue();
+
+
+        } else if(message.equalsIgnoreCase("!resources")){
+            Random random=new Random();
+            int upper=5;
+            int randomValue = random.nextInt(upper);
+            if(randomValue==0)
+                channel.sendMessage("To get wide range of information about Deaf & Hard of Hearing go to https://www.nad.org/resources/%22").queue();
+            if(randomValue==1)
+                channel.sendMessage("Lear about an app that provides transcription with Live Transcribe https://www.nad.org/resources/%22").queue();
+            if(randomValue==2)
+                channel.sendMessage("Find subtitled/captioned movies in your local cinema https://www.yourlocalcinema.com/%22").queue();
+            if(randomValue==3)
+                channel.sendMessage("Convert voice massages int text http://voxsci.com/%22").queue();
+            if(randomValue==4)
+                channel.sendMessage("Check out TopSos: Nonverbal methods of communication in case of emergency https://www.tech4goodawards.com/finalist/tapsos/%22").queue();
+            if(randomValue==5)
+                channel.sendMessage("Get alerts when recorded sound is recognized http://www.braci.co/#soultions%22").queue();
+
         }
+
     }
 
 
@@ -68,12 +94,8 @@ public class Greeting extends ListenerAdapter {
         TextChannel channel = event.getChannel();
 
         // typed text is = "!Listen" then respond back with confirmation message.
-        if (message.equalsIgnoreCase("!join")) {
-            channel.sendMessage("Ok, I'm listening!").queue();
-
-            joinVCChannel(event);
-//            createTextChannel(event);
-        }
+        joinVCChannel(event);
+        createTextChannel(event);
     }
 
     //Placeholder helper function to create a text channel and prepare it to store the dialgue text data translated from the voice chat.
