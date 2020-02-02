@@ -95,40 +95,23 @@ public class Greeting extends ListenerAdapter {
 
         // typed text is = "!Listen" then respond back with confirmation message.
         joinVCChannel(event);
-        createTextChannel(event);
+
         summon(event, event.getGuild().getVoiceChannelsByName("General", true).get(0));
     }
 
-    //Placeholder helper function to create a text channel and prepare it to store the dialgue text data translated from the voice chat.
-    private void createTextChannel(GuildMessageReceivedEvent event){
-
-        //event.getGuild().createTextChannel()
-        Guild guild = event.getGuild();
-
-        //Get name of the voice channel the user is currently in.
-        //Create new temporary logging text channel with vc name + "-interp"
-        VoiceChannel connectedChannel = event.getMember().getVoiceState().getChannel();
-        String channelName = connectedChannel.getName();
-
-        guild.createTextChannel(channelName + "-interp");
-
-
-    }
     private void summon(GuildMessageReceivedEvent event, VoiceChannel channel) {
         // Reference the audio manager
-//        AudioManager manager = channel.
-
-
         AudioManager manager = channel.getGuild().getAudioManager();
 
         // This is required
         manager.setSendingHandler(new SilenceAudioSendHandler());
 
         // Setup the messages.SpeechReceiver, you can initialize a wakeup phrase here, and the speech callback
-        SpeechReceiver speechReceiver = new SpeechReceiver("okay bought", new SpeechCallback() {
+        SpeechReceiver speechReceiver = new SpeechReceiver("wake", new SpeechCallback() {
             // This method is called when a voice command is processed, here it just sends the text back to the text channel
             @Override
             public void commandReceived(String command) {
+                System.out.println("This is the command = " + command);
                 if(!command.equals("")) event.getChannel().sendMessage("You said: "+command+". Is that right?").queue();
             }
 
