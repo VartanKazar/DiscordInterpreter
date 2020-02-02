@@ -11,11 +11,12 @@ Built with JDA, CMUSphinx and a focus on accessibility, Discord Interpreter prov
 4. [Technologies](#technologies)
 5. [Useful links](#useful-links)
 6. [Code Progress](#code-progress)
-7. [Code Team](#code-team)
+7. [Challenges](#challenges)
+8. [Code Team](#code-team)
 
 ## Install
 
-Standard download the files from this site applies. No other versions are officially supported
+Standard download of the files from this site applies. No other versions are officially supported
 
 ## Introduction
 
@@ -77,23 +78,37 @@ As we progressed we realized we wanted to switch over to Java, and moved onto JD
 
 As we came to the stage that we became familiar with what we truly wanted from the app we experienced several other coding challenges which hinder our overall productivity. We had to scrap some ideas due to the limitations of Discord bots and leave other out due to time. Overall all progress we made in terms of our code helped us learn a lot about Discord's API, Java wrappers, importing and setting up libraries, maintaining proper git repositories, establishing timelines, delegating tasks and managing a project's desired abilities vs actual abilities.
 
+## Challenges
+
+* We did not start off with a functional git management system. We did not have a lot of experience with managing branching, committing vs pushing, pulling and fetching software. Over the course of the construction of the bot we learned more about the proper git methodology that is necessary to streamline the creation phase of our bot.
+* Given the little experience we had with Node.js and javascript itself we pivoted to using a Java wrapper for the Discord API and stick with JAVA with which we were all more familiar. This made our repositories get corrupted and we moved onto making a new one from scratch. 
+* Due to the differences of JDK and IDE preferences within each computer our shared code in our repository didnt always work. We had to get togther and stop coding and address the issue as a group, in order to make sure all computers were using the same underlying base software so that we didnt run into errors in running out program.
+* Discord's auth token did not want to be hard coded into our program. We had to shift its location into a seperate text file in the gitignore file and call the value from that location in order to make our program process the token value correctly. This way we got the code to run correctly and safely.
+
 ## Code Team
 
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top">
+      <td align="center" width="20%" valign="top">
         <img width="150" height="150" src="https://github.com/VartanKazar/DiscordInterpreter/blob/dev-josue/docs/images/astghik_hovhannisyan_profile.jpg">
         <br>
         <a href="https://github.com/AstghikHov">Astghik Hovhannisyan</a>
         <p>Presentation</p>
         <br>
       </td>
-      <td align="center" valign="top">
+      <td align="center" width="20%" valign="top">
         <img width="150" height="150" src="https://github.com/VartanKazar/DiscordInterpreter/blob/dev-josue/docs/images/josue_orellana_profile.JPG">
         <br>
         <a href="https://github.com/jiorellana">Josue Orellana</a>
         <p>Documentation</p>
+        <br>
+      </td>
+      <td align="center" width="20%" valign="top">
+        <img width="150" height="150" src="https://github.com/VartanKazar/DiscordInterpreter/blob/dev-josue/docs/images/vartan_kazaryan_profile.jpg">
+        <br>
+        <a href="https://github.com/VartanKazar">Vartan Kazaryan</a>
+        <p>Discord API &amp; development</p>
         <br>
       </td>
       <td align="center" width="20%" valign="top">
@@ -104,13 +119,6 @@ As we came to the stage that we became familiar with what we truly wanted from t
         <br>
       </td>
       <td align="center" width="20%" valign="top">
-        <img width="150" height="150" src="https://github.com/VartanKazar/DiscordInterpreter/blob/dev-josue/docs/images/vartan_kazaryan_profile.jpg">
-        <br>
-        <a href="https://github.com/VartanKazar">Vartan Kazaryan</a>
-        <p>Discord API &amp; development</p>
-        <br>
-      </td>
-      <td align="center" valign="top">
         <img width="150" height="150" src="https://github.com/VartanKazar/DiscordInterpreter/blob/dev-josue/docs/images/tracy_smart_profile.jpg">
         <br>
         <a href="https://github.com/TracySmart795">Tracy Smart</a>
