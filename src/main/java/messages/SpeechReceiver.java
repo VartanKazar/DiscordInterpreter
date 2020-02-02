@@ -1,3 +1,5 @@
+package messages;
+
 import com.google.cloud.speech.v1.*;
 import com.google.protobuf.ByteString;
 import edu.cmu.sphinx.api.Configuration;
@@ -111,7 +113,7 @@ public class SpeechReceiver implements AudioReceiveHandler {
     private static final int BYTES_PER_SECOND = 192000;
 
     /**
-     * Creates a SpeechReceiver object. This will initialize required directories and configure voice recognition
+     * Creates a messages.SpeechReceiver object. This will initialize required directories and configure voice recognition
      * methods.
      * @param wakeupPhrase A wakeup phrase for the bot to wakeup to, you can add more with addWakeupPhrase(String).
      * @param callback The callback that will receive events occurring in this class.

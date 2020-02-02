@@ -1,8 +1,10 @@
+package messages;
+
 import net.dv8tion.jda.api.entities.User;
 
 public interface SpeechCallback {
     /**
-     * This method will be called by SpeechReceiver if a command was detected after bot awakening.
+     * This method will be called by messages.SpeechReceiver if a command was detected after bot awakening.
      * The String command is VocalCord's (Google's) best guess of what the user said in Discord.
      * @param command The text form of the speech recognized by the bot
      */
