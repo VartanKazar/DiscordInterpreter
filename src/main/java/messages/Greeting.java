@@ -24,7 +24,6 @@ public class Greeting extends ListenerAdapter {
 
         //Checks if user is currently connected to a voice channel, if not print error message.
         if(connectedChannel == null) {
-            channel.sendMessage("You are not connected to a voice channel!").queue();
             return;
         }
 
